@@ -1,0 +1,217 @@
+$warning:rgb(243, 228, 145);
+$success: rgb(210, 255, 210);
+$danger : rgb(226, 144, 129);
+
+$topbg:rgb(22, 119, 30);
+
+
+body {
+    padding-top: 100px;
+
+}
+
+.inforow {
+
+    display              : grid;
+    grid-template-columns: 1fr 100px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    padding: 10px;
+    margin : 5px;
+}
+
+
+@media (max-width: 800px) {
+    .inforow {
+
+        display              : grid;
+        grid-template-columns: 1fr;
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        padding: 10px;
+        margin : 5px;
+
+        .value {
+
+            display        : flex;
+            align-items    : flex-end;
+            justify-content: flex-end;
+
+            margin: 20px 3px;
+        }
+    }
+
+    .topbar {
+        position     : fixed;
+        top          : 0;
+        left         : 0;
+        width        : calc(100% - 20px) !important;
+        min-height   : 30px;
+        display      : block !important;
+        background   : $topbg;
+        margin-bottom: 40px;
+        font-family  : tahoma;
+        padding      : 10px !important;
+        color        : #fff;
+    }
+
+    .dataaction,
+    .datainfo {
+        width: 130px;
+
+        display        : inline-flex !important;
+        align-items    : flex-end;
+        justify-content: flex-end;
+    }
+
+    .datainfo {
+        width: calc(100% - 150px);
+    }
+
+    .orginfo {
+        width        : calc(100% - 40px) !important;
+        min-height   : 60px;
+        margin-bottom: 20px;
+    }
+
+    .danger {
+        margin    : 30px 3px;
+        margin-top: 60px !important;
+    }
+
+
+}
+
+
+.value {
+
+    display        : flex;
+    align-items    : flex-end;
+    justify-content: flex-end;
+    margin-right   : 3px;
+}
+
+.desc {
+
+    margin-top : 20px;
+    margin-left: 20px;
+
+}
+
+.name {
+
+    color      : darken($success, 80);
+    font-weight: bold;
+}
+
+.success {
+
+    border-radius: 3px;
+    margin       : 30px 3px;
+
+
+}
+
+
+.success .inforow {
+    background-color: #fafafa;
+    border-radius   : 4px;
+    border          : 1px solid darken(#fafafa, 5);
+    border-left     : 5px solid darken($success, 50);
+}
+
+
+.success .inforow:nth-child(2n) {
+
+    background-color: darken(#fafafa, 2);
+}
+
+
+
+.warning .inforow {
+    background-color  : #fafafa;
+    border-radius     : 4px;
+    border            : 1px solid darken(#fafafa, 5);
+    border-left       : 5px solid darken($warning, 30);
+    //border          : 1px solid darken($warning, 30);
+}
+
+
+.warning .inforow:nth-child(2n) {
+    background-color: darken(#fafafa, 2);
+
+}
+
+
+
+.warning {
+    margin: 30px 3px;
+}
+
+.danger .inforow {
+    background-color: #fafafa;
+    border-radius   : 4px;
+    border          : 1px solid darken(#fafafa, 5);
+    border-left     : 5px solid darken($danger, 30);
+
+}
+
+
+.danger .inforow:nth-child(2n) {
+    background-color: darken(#fafafa, 2);
+}
+
+
+.danger {
+    margin: 30px 3px;
+}
+
+
+.topbar {
+    position             : fixed;
+    top                  : 0;
+    left                 : 0;
+    width                : calc(100% - 40px);
+    min-height           : 30px;
+    display              : grid;
+    grid-template-columns: 1fr 260px 150px;
+    background           : $topbg;
+    margin-bottom        : 40px;
+    font-family          : tahoma;
+    padding              : 20px;
+    color                : #fff;
+}
+
+.orginfo,
+.datainfo,
+.dataaction {
+    display        : flex;
+    align-items    : center;
+
+}
+
+.dataaction {
+    justify-content: flex-end;
+
+}
+
+.orginfo__data {}
+
+
+
+.datainfo__data {}
+
+
+
+.button {
+    display      : inline-flex;
+    padding      : 10px 15px;
+    border-radius: 3px;
+    background   : darken($topbg, 5);
+    color        : #fff;
+    cursor       : pointer;
+
+
+}
