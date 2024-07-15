@@ -61,7 +61,7 @@ class Info
             $this->debug->addLog("Данные по ОГРН " . $this->ogrn . " получены из кеша");
             return $this->cache->get($this->ogrn);
         } else {
-            $data = file_get_contents("https://zachestnyibiznesapi.ru/paid/data/important-facts?api_key=L2GrRUY7AbeAd3PBsSQMIwQs8aORvd1I&id=" . $this->ogrn . "&_format=json");
+            $data = file_get_contents("https://zachestnyibiznesapi.ru/paid/data/important-facts?api_key=&id=" . $this->ogrn . "&_format=json");
             $this->debug->addLog("Данные по ОГРН " . $this->ogrn . " получены из внешнего источника и кешированы");
             $this->cache->add($this->ogrn, $data);
             return $data;
